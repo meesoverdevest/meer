@@ -39,9 +39,7 @@ class ImportGrondwater extends Command
      * @return mixed
      */
     public function handle()
-    {
-        $self = $this;
-        
+    {        
         Excel::filter('chunk')->load('public/grondwaterdatadordrecht.csv')->chunk(200, function($reader) {
 
             foreach($reader as $row) {

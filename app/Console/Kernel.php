@@ -13,7 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        Commands\ImportGrondwater::class
+        Commands\ImportGrondwater::class,
+        Commands\SyncRainfall::class,
     ];
 
     /**
