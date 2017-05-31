@@ -17,9 +17,9 @@ class CreatePeilbuizenTables extends Migration
             $table->increments('id');
             $table->string('peilbuiscode')->unique();
             $table->string('straat')->nullable();
-            $table->integer('huisnummer')->nullable();
-            $table->float('longitude', 14, 9)->nullable();
-            $table->float('latitude', 14, 9)->nullable();
+            $table->string('huisnummer')->nullable();
+            $table->float('longitude', 15, 12)->nullable();
+            $table->float('latitude', 15, 12)->nullable();
             
             $table->timestamps();
         });

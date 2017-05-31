@@ -41,13 +41,16 @@ class SyncRainfall extends Command
         $client = new Client();
         $res = $client->request('POST', 'http://projects.knmi.nl/klimatologie/daggegevens/getdata_dag.cgi', 
             [
-                'post-data' => ['vars' => 'PRCP', 'stns' => '459']
+                'post-data' => [
+                'vars' => 'PRCP', 'stns' => '833'
+                ]
             ]
         );
 
         $this->line($res->getStatusCode());
         $this->line($res->getHeader('content-type'));
         var_dump($res->getBody());
+        var_dump($res);
         $this->line('imported!');
         // 'start' => '', 'end' => '',
     }

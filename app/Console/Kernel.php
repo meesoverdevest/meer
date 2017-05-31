@@ -15,6 +15,10 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         Commands\ImportGrondwater::class,
         Commands\SyncRainfall::class,
+        Commands\ImportWaterLevels::class,
+
+        // To be finished
+        // Commands\DBImportCommand::class,
     ];
 
     /**

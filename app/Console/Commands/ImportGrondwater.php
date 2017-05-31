@@ -40,9 +40,10 @@ class ImportGrondwater extends Command
      */
     public function handle()
     {        
-        Excel::filter('chunk')->load('public/grondwaterdatadordrecht.csv')->chunk(200, function($reader) {
+        Excel::filter('chunk')->load('public/grondwater_pt2.csv')->chunk(200, function($reader) {
 
             foreach($reader as $row) {
+
                 // Check whether peilbuis exists
                 $peilbuis = Peilbuis::where('peilbuiscode', $row->peilbuiscode)->first();
                 
@@ -58,7 +59,12 @@ class ImportGrondwater extends Command
                 }
 
                 // create peilbuismeting for each peilbuis
-                $peilbuismeting = PeilbuisMeting::where('meetdatum', $row->meetdatum)->where('nap_hoogte_meetpunt', $row->nap_hoogte_meetpunt)->where('grondwaterstand', $row->grondwaterstand)->where('nap_hoogte_maaiveld', $row->nap_hoogte_maaiveld)->first();
+                $peilbuismeting = PeilbuisMeting::where('meetdatum', $row->meetdatum)
+                    ->where('nap_hoogte_meetpunt', $row->nap_hoogte_meetpunt)
+                    ->where('grondwaterstand', $row->grondwaterstand)
+                    ->where('nap_hoogte_maaiveld', $row->nap_hoogte_maaiveld)
+                    ->where('peilbuis_id', $peilbuis->id)
+                    ->first();
                 
                 if(!$peilbuismeting) {
                     $peilbuismeting = new PeilbuisMeting();
@@ -71,6 +77,7 @@ class ImportGrondwater extends Command
                 }
 
             }
+
         });
 
         // Done !
