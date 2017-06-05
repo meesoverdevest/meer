@@ -1,0 +1,29 @@
+html, body, main {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+main {
+	display: block;
+}
+#map {
+	height: 100%;
+}
+#location-form {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+#location-input {
+	padding: 8px 12px;
+	width: 200px;
+	border-radius: 2px;
+	border: 1px solid #dbdbdb;
+}
+#location-submit {
+	background-color: cornflowerblue;
+	color: white;
+	padding: 6px 12px;
+	border: 0;
+	border-radius: 2px;
+}
