@@ -21,6 +21,18 @@
         <div id="location-form">
             <input id="location-input" type="text" placeholder="Voer uw postcode in..."/>
             <input id="location-submit" type="submit" value="Zoek"/>
+
+            <select id="question">
+              <option data-subject="1" value="1">Ik wil mijn kelder verbouwen</option>
+              <option data-subject="1" value="2">Ik wil ook mijn kelder verbouwen</option>
+              <option data-subject="2" value="3">Ik wil verhuizen</option>
+              <option data-subject="2" value="4">Ik wil ook verhuizen</option>
+            </select>
+
+            <select id="subject">
+              <option value="1">Verbouwingen</option>
+              <option value="2">Verhuizen</option>
+            </select>
         </div>
 
         </main>
@@ -29,5 +41,6 @@
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3yuySq1G8DhTT7UKRkH6ik35CLQpPprk&callback=initMap"
     async defer></script>
         <script src="{{ asset('/js/map.js') }}"></script>
+        <script src="{{ asset('/js/questions.js') }}"></script>
     </body>
 </html>
