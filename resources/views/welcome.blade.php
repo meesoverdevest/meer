@@ -9,31 +9,88 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        <link href='https://fonts.googleapis.com/css?family=Cabin+Condensed:700' rel='stylesheet' type='text/css'>
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="{{ asset('/css/font-awesome.min.css') }}">
+        
         <link rel="stylesheet" href="{{ asset('/css/main.css') }}"/>
     </head>
     <body>
         
         <main>
 
-        <div id="map"></div>
+            <div id="map"></div>
 
-        <div id="location-form">
-            <input id="location-input" type="text" placeholder="Voer uw postcode in..."/>
-            <input id="location-submit" type="submit" value="Zoek"/>
+            <h1 id="title">Waterdashboard</h1>
 
-            <select id="question">
-              <option data-subject="1" value="1">Ik wil mijn kelder verbouwen</option>
-              <option data-subject="1" value="2">Ik wil ook mijn kelder verbouwen</option>
-              <option data-subject="2" value="3">Ik wil verhuizen</option>
-              <option data-subject="2" value="4">Ik wil ook verhuizen</option>
-            </select>
+            <div id="location-form">
+                <input id="location-input" type="text" placeholder="Voer uw postcode in..."/>
 
-            <select id="subject">
-              <option value="1">Verbouwingen</option>
-              <option value="2">Verhuizen</option>
-            </select>
-        </div>
+                <select id="subject">
+                  <option value="1">Verbouwingen</option>
+                  <option value="2">Verhuizen</option>
+                </select>
+
+                <select id="question">
+                  <option data-subject="1" value="1">Ik wil mijn kelder verbouwen</option>
+                  <option data-subject="1" value="2">Ik wil ook mijn kelder verbouwen</option>
+                  <option data-subject="2" value="3">Ik wil verhuizen</option>
+                  <option data-subject="2" value="4">Ik wil ook verhuizen</option>
+                </select>
+
+                <input id="location-submit" type="submit" value="Zoek"/>
+            </div>
+
+            <div id="dashboard">
+                <p class="fa fa-angle-up"></p>
+                <h1>Waterdashboard</h1>
+
+                <div class="flex vertical">    
+                  <div class="flex">
+                    <div class="box waterhoogte-box">
+                        <!-- <div class="waterhoogte-image">
+                            <img src="{{ asset('/img/waterhoogte.png') }}"/>
+                        </div> -->
+                        <div class="waterhoogte-info">
+                            <h2>In de maand mei is er:</h2>
+                            <p>40-45 mm neerslag gevallen.</p>
+                            <p>Wateren in uw buurt staan 10cm hoger dan normaal.</p>
+                        </div>
+                    </div>    
+                    <div id="map-small" class="box"></div>
+                  </div>
+
+                  <div class="flex">
+                    <div class="box advise-box">
+                        <h2>Gepersonaliseerd advies op basis van vraag.</h2>
+                        <p>_______________________________</p>
+                        <p>_________________________</p>
+                        <p>_____________________________</p>
+                        <p>____________________________</p>
+                        <p>_____________________</p>
+                    </div>    
+                    <div class="box temperature-box">
+                        <h2>18&deg;C</h2>
+                    </div>
+                  </div>
+
+                  <div class="flex">
+                    <div class="box download-box">
+                        <div class="fa fa-cloud-download"></div>
+                        <p>Download</p>
+                    </div>    
+                    <div class="box mail-box">
+                        <div class="fa fa-envelope"></div>
+                        <p>Ontvang per post</p>
+                    </div>
+                    <div class="box call-box">
+                        <div class="fa fa-phone"></div>
+                        <p>Bel ons op 0800-9944</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
 
         </main>
 
@@ -42,5 +99,29 @@
     async defer></script>
         <script src="{{ asset('/js/map.js') }}"></script>
         <script src="{{ asset('/js/questions.js') }}"></script>
+        <script>
+        (function() {
+
+        // EVENTS -----------------------------------------------------------------------
+        
+        $("#location-submit").on("click", scrollToDashboard);
+        $("#dashboard .fa-angle-up").on("click", scrollToMap);
+
+        // FUNCTIONS -----------------------------------------------------------------------
+        
+        function scrollToDashboard() {
+            $('html, body').animate({
+                scrollTop: $("#dashboard").offset().top
+            }, 500);
+        }
+
+        function scrollToMap() {
+            $('html, body').animate({
+                scrollTop: 0
+            }, 500);
+        }
+
+        })();
+        </script>
     </body>
 </html>
