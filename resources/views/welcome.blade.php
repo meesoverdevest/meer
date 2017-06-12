@@ -34,9 +34,7 @@
 
                 <select id="question">
                   <option data-subject="1" value="1">Ik wil mijn kelder verbouwen</option>
-                  <option data-subject="1" value="2">Ik wil ook mijn kelder verbouwen</option>
                   <option data-subject="2" value="3">Ik wil verhuizen</option>
-                  <option data-subject="2" value="4">Ik wil ook verhuizen</option>
                 </select>
 
                 <input id="location-submit" type="submit" value="Zoek"/>
@@ -64,11 +62,7 @@
                   <div class="flex">
                     <div class="box advise-box">
                         <h2>Gepersonaliseerd advies op basis van vraag.</h2>
-                        <p>_______________________________</p>
-                        <p>_________________________</p>
-                        <p>_____________________________</p>
-                        <p>____________________________</p>
-                        <p>_____________________</p>
+                        <p>Het aanleggen van een kelder brengt veel gevaarlijke aspecten met zich mee wanneer u in een risicogebied woont.<br>Het is daarom van belang om met bouwbedrijven uit uw regio te overleggen over de meest veilige mogelijkheden voor de aanleg van een kelder onder uw woning.</p>
                     </div>    
                     <div class="box temperature-box">
                         <h2>18&deg;C</h2>

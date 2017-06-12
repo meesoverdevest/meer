@@ -188,6 +188,7 @@ h1 {
 	position: relative;
 }
 .advise-box {
+	max-width: 75%;
 	padding: 20px;
 }
 .temperature-box h2 {

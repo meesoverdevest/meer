@@ -1,5 +1,7 @@
 $(document).on("click", "#location-submit", function(e) {
-    var location = $("#location-input").val();
+    var street = $("#location-input").val();
+    var city = "dordrecht";
+    var location = street + ", " + city;
 
     if(location != "") {
       geocodeLocation(location);
