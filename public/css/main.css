@@ -9,12 +9,12 @@ html, body, main {
 main {
 	display: block;
 }
+body {
+	font-family: 'Roboto', sans-serif;
+}
 h1 {
-	text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
-	text-transform: uppercase;
-	font-family: 'Cabin Condensed', sans-serif;
-	font-weight: bold;
 	font-size: 50px;
+	box-shadow: 1px 3px 3px rgba(0,0,0,0.1);
 }
 .pull-left {
 	float: left !important;
@@ -33,7 +33,7 @@ h1 {
 	top: 25%;
 }
 #location-form {
-	width: 60%;
+	width: 80%;
 	transform: translate(-50%, -50%);
 	background: rgba(255,255,255,0.7);
     border-radius: 4px;
@@ -47,7 +47,16 @@ h1 {
 	font-size: 18px;
 }
 #location-input {
-	width: 200px;
+	width: 120px;
+	font-size: 18px;
+	margin-right: 20px;
+	padding: 8px 12px;
+	float: left;
+	border-radius: 2px;
+	border: 1px solid #dbdbdb;
+}
+#location-input-number {
+	width: 60px;
 	font-size: 18px;
 	margin-right: 20px;
 	padding: 8px 12px;
@@ -66,18 +75,22 @@ h1 {
 }
 
 #subject {
+	width: 200px;
 	margin-right: 20px;
 }
 #subject, #question {
-	padding: 7px;
+	padding: 6px;
 	float: left;
 	color: #777777;
 	border: 1px solid #dbdbdb;
 	border-radius: 2px;
 }
+#question {
+	width: 500px;
+}
 #dashboard {
 	width: 800px;
-	margin: 0 auto 100px;
+	margin: 0 auto;
 }
 #dashboard h1 {
 	padding-top: 40px;
@@ -99,10 +112,12 @@ h1 {
 }
 
 #map-small {
-	width: 200px;
-	background-image: url('../img/dordrecht.png');
-	background-size: cover;
-	background-position: center;
+	width: 300px;
+    background-image: url('../img/dordrecht.png');
+    background-size: cover;
+    background-position: center;
+    height: 180px;
+    border: 1px solid white;
 }
 
 .flex{
@@ -131,28 +146,18 @@ h1 {
           flex-direction: column;     
 }
 
-.box{
-  min-height: 200px;
-  flex: auto;
-  padding: 10px;
-  font-family: 'Cabin Condensed', sans-serif;
-  border: 1px solid #dbdbdb;
-  background: #fff;
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+.box {
+	width: 33.333333333333333333333333%;
+	float: left;
 }
-.box h2 {
-	font-weight:bold;
-	font-size: 20px;
+.box h3 {
+	text-align: center;
 }
 .box p {
-	font-size: 14px;
-}
-.waterhoogte-box {
-	padding: 20px;
-}
-.waterhoogte-info {
-	float: left;
-	/*margin: 20px 40px;*/
+	font-size: 50px;
+	text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
 }
 .waterhoogte-info h2, .waterhoogte-info p {
 	margin: 4px 0;
@@ -198,4 +203,141 @@ h1 {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-size: 80px;
+}
+
+#dashboard {
+	width: 100%;
+	color: white !important;
+}
+
+.row {
+	width: 100%;
+	box-shadow: 0px 6px 12px rgba(0,0,0,0.2) inset;
+}
+.row-inner {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 80px 0;
+	position: relative;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+	.row-inner .icon,
+	.row-inner .data,
+	.row-inner .info,
+	.row-inner .advise {
+		width: 25%;
+		box-sizing: border-box;
+	}
+	.row-inner .icon {
+	    height: 200px;
+	    float: left;
+	    background-repeat: no-repeat;
+	    background-size: 600px;
+	    background-position: center;
+	}
+		.row-waterhoogte .row-inner .icon {
+			background-image: url('../img/Waterlevel.png');
+		}
+		.row-grondkwaliteit .row-inner .icon {
+			background-image: url('../img/Grondkwaliteit.png');
+		}
+		.row-drainage .row-inner .icon {
+			background-image: url('../img/Drainage.png');
+		}
+	.row-inner .data {
+		padding-left: 80px;
+		padding-right: 40px;
+		float: right;
+	}
+		.row-inner .data .vinkje {
+			width: 200px;
+			height: 200px;
+			background-image: url('../img/Vinkje.png');
+			background-repeat: no-repeat;
+			background-position: top center;
+		}
+		.row-inner .data h3 {
+			margin-bottom: 20px;
+		}
+		.row-inner .data ul {
+			list-style: none;
+		}
+			.row-inner .data li {
+				margin-bottom: 10px;
+			}
+	.row-inner .info {
+		padding-right: 40px;
+		float: right;
+	}
+		.row-inner .info h3 {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		.row-inner .info p {
+			margin-bottom: 20px;
+			text-align: justify;
+		}
+	.row-inner .advise {
+		float: right;
+	}
+.row-subject {
+	background-color: #333333;
+}
+	.row-subject h2 {
+		font-size: 30px;
+		float: left;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.row-subject .location-zoom {
+		float: right;
+	}
+	.row-subject .location-zoom h3 {
+		margin-bottom: 4px;
+	}
+	.row .row-inner:after {
+	  content: '';
+	  width: 0; 
+	  height: 0; 
+	  position: absolute;
+	  top: 0px;
+	  border-left: 60px solid transparent;
+	  border-right: 60px solid transparent;  
+	  border-top: 40px solid #D4A190;
+	}
+		.row-subject .row-inner:after {
+			border-top: 0;
+			border-right: 0;
+			border-left: 0;
+		}
+		.row-waterhoogte .row-inner:after {
+			left: 100px;
+			border-top-color: #333333;
+		}
+		.row-grondkwaliteit .row-inner:after {
+			left: 300px;
+			border-top-color: #0FA4D6;
+		}
+		.row-drainage .row-inner:after {
+			left: 500px;
+			border-top-color: #B07017;	
+		}
+		.row-contact .row-inner:after {
+			left: 700px;
+			border-top-color: #309164;
+		}
+
+.row-waterhoogte {
+	background-color: #0FA4D6;
+}
+.row-grondkwaliteit {
+	background-color: #B07017;
+}
+.row-drainage {
+	background-color: #309164;
+}
+.row-contact {
+	background-color: #333333;
 }
