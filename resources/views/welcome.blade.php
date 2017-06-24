@@ -79,15 +79,17 @@
 
                 <div class="row row-waterhoogte">
                     <div class="row-inner">
-                        <div class="icon"></div>
+                        <div class="icon">
+                            <h3>Grondwaterhoogte</h3>
+                        </div>
                         <div class="info">
                             <h3>Advies</h3>
-                            <p>Het waterspiegel is op normaal niveau en zal geen problemen geven bij het aanleggen van een kelder.</p>
+                            <p>Het grondwater is op normaal niveau en zal geen problemen geven bij het aanleggen van een kelder.</p>
                         </div>
                         <div class="info">
                             <h3>Informatie</h3>
-                            <p>Het waterspiegel is in de maand mei met 12cm gestegen ten opzichte van de maand april.</p>
-                            <p>Vergeleken met de maand mei van vorig jaar, ligt het waterspiegel 0.1cm hoger.</p>
+                            <p>Het grondwater is in de maand mei met 12cm gestegen ten opzichte van de maand april.</p>
+                            <p>Vergeleken met de maand mei van vorig jaar, ligt het grondwater 0.1cm hoger.</p>
                         </div>
                         <div class="data">
                             <h3>&nbsp;</h3>
@@ -102,15 +104,17 @@
 
                 <div class="row row-grondkwaliteit">
                     <div class="row-inner">
-                        <div class="icon"></div>
+                        <div class="icon">
+                            <h3>Grondkwaliteit</h3>
+                        </div>
                         <div class="info">
                             <h3>Advies</h3>
-                            <p>Het waterspiegel is op normaal niveau en zal geen problemen geven bij het aanleggen van een kelder.</p>
+                            <p>De grondkwaliteit in uw omgeving is goed.</p>
                         </div>
                         <div class="info">
                             <h3>Informatie</h3>
-                            <p>Het waterspiegel is in de maand mei met 12cm gestegen ten opzichte van de maand april.</p>
-                            <p>Vergeleken met de maand mei van vorig jaar, ligt het waterspiegel 0.1cm hoger.</p>
+                            <p>De bodemkwaliteit geeft de capaciteit van een bodem aan om onder wisselende omstandigheden te functioneren.</p>
+                            <p>Een bodem van goede kwaliteit vormt een gezond onderdeel van een ecosysteem dat verschillende diensten aan mensen kan leveren.</p>
                         </div>
                         <div class="data">
                             <h3>&nbsp;</h3>
@@ -121,15 +125,17 @@
 
                 <div class="row row-drainage">
                     <div class="row-inner">
-                        <div class="icon"></div>
+                        <div class="icon">
+                            <h3>Drainage</h3>
+                        </div>
                         <div class="info">
                             <h3>Advies</h3>
-                            <p>Het waterspiegel is op normaal niveau en zal geen problemen geven bij het aanleggen van een kelder.</p>
+                            <p>Er zijn in uw omgeving geen problemen met het afvoeren van het grondwater.</p>
                         </div>
                         <div class="info">
                             <h3>Informatie</h3>
-                            <p>Het waterspiegel is in de maand mei met 12cm gestegen ten opzichte van de maand april.</p>
-                            <p>Vergeleken met de maand mei van vorig jaar, ligt het waterspiegel 0.1cm hoger.</p>
+                            <p>Drainage of ontwatering is het afvoeren van water uit de bodem over en door de grond, met als gevolg het verlagen van het grondwaterpeil.</p>
+                            <p>Hierbij kan het water worden afgevoerd via drains, kleine sloten of greppels. Via deze waterafvoermiddelen stroomt het water naar grotere watergangen, die de functie van afwatering hebben.</p>
                         </div>
                         <div class="data">
                             <h3>&nbsp;</h3>

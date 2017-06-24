@@ -231,11 +231,19 @@ h1 {
 	}
 	.row-inner .icon {
 	    height: 200px;
+	    position: relative;
 	    float: left;
 	    background-repeat: no-repeat;
 	    background-size: 600px;
 	    background-position: center;
 	}
+		.row-inner .icon h3 {
+			font-size: 24px;
+			position: absolute;
+		    bottom: -36px;
+		    width: 100%;
+		    text-align: center;
+		}
 		.row-waterhoogte .row-inner .icon {
 			background-image: url('../img/Waterlevel.png');
 		}
